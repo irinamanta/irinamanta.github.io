@@ -33,8 +33,8 @@ h1 { font-size: 2rem; letter-spacing: 0.01em; }
 h2 { font-size: 1.3rem; margin-top: 2.2em; }
 h3 { font-size: 1.05rem; margin-bottom: 0.3em; }
 
-a { color: var(--navy-soft); text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; }
-a:hover { color: var(--brass); text-decoration-color: var(--brass); }
+a { color: #1155cc; text-decoration: underline; text-decoration-color: #1155cc; text-underline-offset: 3px; }
+a:hover { color: #0d3d99; text-decoration-color: #0d3d99; }
 
 p { margin: 0 0 1em; color: var(--ink-soft); }
 
@@ -61,15 +61,15 @@ header.site-header {
 nav.main-nav a {
   margin-right: 1.4rem;
   font-size: 0.95rem;
-  color: var(--ink-soft);
+  color: #1155cc;
   text-decoration: none;
   border-bottom: 2px solid transparent;
   padding-bottom: 3px;
 }
 nav.main-nav a:hover,
 nav.main-nav a.active {
-  color: var(--navy);
-  border-bottom-color: var(--brass);
+  color: #0d3d99;
+  border-bottom-color: #1155cc;
 }
 
 main {
@@ -167,7 +167,7 @@ footer.site-footer {
   color: var(--ink-soft);
   font-size: 0.9rem;
 }
-footer.site-footer a { color: var(--ink-soft); margin-right: 1rem; }
+footer.site-footer a { color: #1155cc; margin-right: 1rem; }
 
 @media (max-width: 560px) {
   .about-grid { grid-template-columns: 1fr; }
