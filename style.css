@@ -88,24 +88,25 @@ main {
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 230px;
-  gap: 2.4rem;
+  grid-template-areas:
+    "bio photo"
+    "bio contact"
+    "bio elsewhere";
+  column-gap: 2.4rem;
+  row-gap: 1.2rem;
   align-items: start;
 }
 
-.sidebar {
-  grid-column: 2;
-  grid-row: 1;
-}
-.bio-col {
-  grid-column: 1;
-  grid-row: 1;
-}
+.bio-col { grid-area: bio; }
+.contact-block { grid-area: contact; }
+.elsewhere-block { grid-area: elsewhere; }
 
 .headshot {
+  grid-area: photo;
   width: 100%;
   border-radius: 3px;
   display: block;
-  margin: 0 0 1.4rem;
+  margin: 0;
 }
 
 ul.plain { list-style: none; padding: 0; margin: 0 0 1em; }
@@ -114,7 +115,6 @@ ul.plain li { margin-bottom: 0.6em; color: var(--ink-soft); }
 .contact-block, .elsewhere-block {
   padding-top: 1.2rem;
   border-top: 1px solid var(--rule);
-  margin-bottom: 1.2rem;
 }
 .contact-block h2, .elsewhere-block h2 {
   font-size: 0.85rem;
@@ -170,7 +170,13 @@ footer.site-footer {
 footer.site-footer a { color: #1155cc; margin-right: 1rem; }
 
 @media (max-width: 560px) {
-  .about-grid { grid-template-columns: 1fr; }
-  .sidebar { grid-column: 1; grid-row: 1; max-width: 220px; margin: 0 auto; }
-  .bio-col { grid-column: 1; grid-row: 2; }
+  .about-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "bio"
+      "photo"
+      "contact"
+      "elsewhere";
+  }
+  .headshot { max-width: 220px; margin: 0 auto; }
 }
